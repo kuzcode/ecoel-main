@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: title;
+  src: url(../public/title.ttf);
+}
+
 @layer components {
   /* main */
   .main-container {
@@ -257,4 +262,41 @@
 .readOnlyText {
   background-color: #e772ff;
   color: #5c5c7b;
+}
+
+.title {
+  font-family: 'title';
+  font-size: 21px;
+}
+
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 18px;
+    margin-left: -8px;
+  }
+
+  .topbar {
+    padding-left: 12px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .title {
+    font-size: 17px;
+    margin-left: -10px;
+  }
+
+  .topbar {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 315px) {
+  .title {
+    display: none;
+  }
+
+  .topbar {
+    padding-left: 24px;
+  }
 }
