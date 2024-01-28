@@ -13,8 +13,8 @@ import Topbar from "@/components/shared/Topbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Codex форум",
-  description: "Codex форум — укромный уголок айтишников.",
+  title: "Эко-Эл форум",
+  description: "Эко-Эл форум — укромный уголок учеников прекрасной школы.",
 };
 
 export default function RootLayout({

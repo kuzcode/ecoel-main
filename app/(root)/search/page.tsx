@@ -46,7 +46,6 @@ async function Page({
                 imgUrl={person.image}
                 personType='User'
                 verif={person.verif}
-                email={person.email}
               />
             ))}
           </>

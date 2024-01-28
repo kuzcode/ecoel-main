@@ -78,9 +78,6 @@ function PostThread({ userId, likes, name }: Props) {
         <Button type='submit' className='bg-primary-500 rounded-2xl btn'>
           Опубликовать как {name}
         </Button>
-        <Button type='submit' className='bg-primary-500 rounded-2xl btn'>
-          Опубликовать анонимно
-        </Button>
         </div>
       </form>
     </Form>

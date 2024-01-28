@@ -27,7 +27,6 @@ async function Page({ params }: { params: { id: string } }) {
         imgUrl={userInfo.image}
         bio={userInfo.bio}
         verif={userInfo.verif}
-        email={userInfo.email}
       />
 
       <div className='mt-9'>

@@ -29,7 +29,6 @@ interface Params {
   bio: string;
   image: string;
   path: string;
-  email: string;
   verif: boolean;
 }
 
@@ -40,7 +39,6 @@ export async function updateUser({
   path,
   username,
   image,
-  email,
 }: Params): Promise<void> {
   try {
     connectToDB();
@@ -50,7 +48,6 @@ export async function updateUser({
       {
         username: username.toLowerCase(),
         name,
-        email,
         bio,
         image,
         onboarded: true,
@@ -103,7 +100,7 @@ export async function fetchUsers({
   userId,
   searchString = "",
   pageNumber = 1,
-  pageSize = 20,
+  pageSize = 10,
   sortBy = "desc",
 }: {
   userId: string;

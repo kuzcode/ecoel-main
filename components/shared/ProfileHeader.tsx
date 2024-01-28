@@ -10,7 +10,6 @@ interface Props {
   bio: string;
   type?: string;
   verif: boolean;
-  email: string;
 }
 
 function ProfileHeader({
@@ -22,7 +21,6 @@ function ProfileHeader({
   bio,
   type,
   verif,
-  email,
 }: Props) {
   return (
     <div className='flex w-full flex-col justify-start'>
@@ -38,13 +36,15 @@ function ProfileHeader({
           </div>
 
           <div className='flex-1'>
-          <div className="row">
-                <h2 className='text-left text-heading3-bold text-light-1 row'>
-                  {name}
-                </h2>
-                {verif === true && (
-                <div className="verif"></div>
-                )}
+            <div className="row">
+              <h2 className='text-left text-heading3-bold text-light-1 row profileText'>
+                {name}
+              </h2>
+              {verif === true && (
+                <div className="left">
+                  <div className="verif"></div>
+                </div>
+              )}
             </div>
             <p className='text-base-medium text-gray-1'>@{username}</p>
           </div>

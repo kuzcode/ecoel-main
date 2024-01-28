@@ -242,3 +242,19 @@
   position: relative;
   margin: 6px 12px;
 }
+
+.profileText {
+  width: auto;
+  max-width: min-content;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.readOnlyText {
+  background-color: #e772ff;
+  color: #5c5c7b;
+}

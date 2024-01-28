@@ -9,7 +9,7 @@ import "../globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Авторизация Codex",
+  title: "Авторизация Эко-Эл",
   description: "Создайте ваш аккаунт на нашем форуме ✨",
 };
 

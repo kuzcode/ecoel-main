@@ -34,7 +34,6 @@ interface Props {
     bio: string;
     image: string;
     verif: boolean;
-    email: string;
   };
   btnTitle: string;
 }
@@ -53,7 +52,6 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
       name: user?.name ? user.name : "",
       username: user?.username ? user.username : "",
       bio: user?.bio ? user.bio : "",
-      email: user?.email ? user.email : "",
     },
   });
 
@@ -77,10 +75,9 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
       bio: values.bio,
       image: values.profile_photo,
       verif: user.verif,
-      email: values.email,
     });
 
-    if (pathname === "/profile/edit") {
+    if (pathname === `/${user.username}/edit`) {
       router.back();
     } else {
       router.push("/");
@@ -181,26 +178,6 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
             <FormItem className='flex w-full flex-col gap-3'>
               <FormLabel className='text-base-semibold text-light-2'>
                 Никнейм
-              </FormLabel>
-              <FormControl>
-                <Input
-                  type='text'
-                  className='account-form_input no-focus rounded-2xl'
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name='email'
-          render={({ field }) => (
-            <FormItem className='flex w-full flex-col gap-3'>
-              <FormLabel className='text-base-semibold text-light-2'>
-                Эл. почта
               </FormLabel>
               <FormControl>
                 <Input

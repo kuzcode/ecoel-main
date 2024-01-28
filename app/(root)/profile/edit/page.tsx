@@ -19,7 +19,6 @@ async function Page() {
     username: userInfo ? userInfo?.username : user.username,
     name: userInfo ? userInfo?.name : user.firstName ?? "",
     bio: userInfo ? userInfo?.bio : "",
-    email: userInfo ? userInfo?.email : "",
     image: userInfo ? userInfo?.image : user.imageUrl,
     verif: userInfo? userInfo?.verif : false,
   };

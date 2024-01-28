@@ -11,11 +11,10 @@ interface Props {
   username: string;
   imgUrl: string;
   personType: string;
-  email: string;
   verif: boolean;
 }
 
-function UserCard({ id, name, username, imgUrl, personType, verif, email }: Props) {
+function UserCard({ id, name, username, imgUrl, personType, verif }: Props) {
   const router = useRouter();
 
   const isCommunity = personType === "Community";

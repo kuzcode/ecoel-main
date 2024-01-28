@@ -14,8 +14,4 @@ export const UserValidation = z.object({
     .string()
     .min(0, { message: "Минимум 0 символов." })
     .max(512, { message: "Максимум 512 символов." }),
-    email: z
-    .string()
-    .min(5, { message: "Минимум 5 символов." })
-    .max(64, { message: "Максимум 64 символа." }),
 });
