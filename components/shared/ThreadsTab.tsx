@@ -10,12 +10,12 @@ interface Result {
   id: string;
   verif: boolean;
   threads: {
+    isAnonym: boolean;
     _id: string;
     text: string;
     parentId: string | null;
     verif: boolean;
     likes: Array<string>
-    isAnonym: boolean;
     author: {
       name: string;
       image: string;

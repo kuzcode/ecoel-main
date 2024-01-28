@@ -63,7 +63,7 @@ export async function updateUser({
   }
 }
 
-export async function fetchUserPosts(userId: string, isAnonym: boolean ) {
+export async function fetchUserPosts(userId: string) {
   try {
     connectToDB();
 
