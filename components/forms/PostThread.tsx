@@ -20,13 +20,19 @@ import { Textarea } from "@/components/ui/textarea";
 import { ThreadValidation } from "@/lib/validations/thread";
 import { createThread } from "@/lib/actions/thread.actions";
 
+
 interface Props {
   userId: string;
   likes: Array<string>;
   name: string;
 }
 
-function PostThread({ userId, likes, name }: Props) {
+function postAnonym(){
+  var isAnonymSelect = true;
+  console.log('hello world')
+}
+
+function PostThread(this: any, { userId, likes, name }: Props) {
   const router = useRouter();
   const pathname = usePathname();
 

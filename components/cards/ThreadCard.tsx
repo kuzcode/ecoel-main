@@ -77,8 +77,6 @@ function ThreadCard({
             </Link>
 
             )}
-
-            <div className='thread-card_bar' />
           </div>
 
           <div className='flex w-full flex-col'>
@@ -105,7 +103,9 @@ function ThreadCard({
               </Link>
             )}
 
-            <p className='mt-2 text-small-regular text-light-2'>{content}</p>
+            
+              <p className='mt-2 text-small-regular text-light-2'>{content}</p>
+            
 
             <div className={`${isComment && "mb-10"} mt-5 flex flex-col gap-3`}>
               <div className='flex gap-3.5 row'>

@@ -17,8 +17,8 @@ export async function fetchUser(userId: string) {
       path: "communities",
       model: Community,
     });
-  } catch (error) {
-    throw new Error(`Failed to fetch user: ${error}`);
+  } catch (error: any) {
+    throw new Error(`Failed to fetch user: ${error.message}`);
   }
 }
 
@@ -29,7 +29,6 @@ interface Params {
   bio: string;
   image: string;
   path: string;
-  verif: boolean;
 }
 
 export async function updateUser({
@@ -58,8 +57,8 @@ export async function updateUser({
     if (path === "/profile/edit") {
       revalidatePath(path);
     }
-  } catch (error) {
-    throw new Error(`Failed to create/update user: ${error}`);
+  } catch (error: any) {
+    throw new Error(`Failed to create/update user: ${error.message}`);
   }
 }
 
@@ -100,7 +99,7 @@ export async function fetchUsers({
   userId,
   searchString = "",
   pageNumber = 1,
-  pageSize = 10,
+  pageSize = 20,
   sortBy = "desc",
 }: {
   userId: string;
