@@ -106,6 +106,8 @@ export async function likeThread(id: string, currentUserId: string, likes: Array
 
     likes.push(currentUserId)
 
+
+
     const likedThread = await Thread.findByIdAndUpdate(
       id,
       { $addToSet: { likes: currentUserId } },

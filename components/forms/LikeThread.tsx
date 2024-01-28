@@ -26,6 +26,10 @@ function LikeThread({
   const pathname = usePathname();
   const router = useRouter();
 
+  function returnLike() {
+    likes.push(currentUserId)
+  }
+
   if (likes.includes(currentUserId)) {
     return (
       <Image
@@ -37,7 +41,6 @@ function LikeThread({
         onClick={async () => {
           await dislikeThread(JSON.parse(threadId), currentUserId, likes);
           if (!parentId || !isComment) {
-            router.push("/");
           }
         }
       }
@@ -54,7 +57,6 @@ function LikeThread({
       onClick={async () => {
         await likeThread(JSON.parse(threadId), currentUserId, likes );
         if (!parentId || !isComment) {
-          router.push("/");
         }
       }
     }
