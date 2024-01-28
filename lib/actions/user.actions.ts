@@ -17,8 +17,8 @@ export async function fetchUser(userId: string) {
       path: "communities",
       model: Community,
     });
-  } catch (error: any) {
-    throw new Error(`Failed to fetch user: ${error.message}`);
+  } catch (error) {
+    throw new Error(`Failed to fetch user: ${error}`);
   }
 }
 
@@ -29,6 +29,7 @@ interface Params {
   bio: string;
   image: string;
   path: string;
+  verif: boolean;
 }
 
 export async function updateUser({
@@ -57,17 +58,17 @@ export async function updateUser({
     if (path === "/profile/edit") {
       revalidatePath(path);
     }
-  } catch (error: any) {
-    throw new Error(`Failed to create/update user: ${error.message}`);
+  } catch (error) {
+    throw new Error(`Failed to create/update user: ${error}`);
   }
 }
 
-export async function fetchUserPosts(userId: string) {
+export async function fetchUserPosts(userId: string, isAnonym: boolean ) {
   try {
     connectToDB();
 
     // Find all threads authored by the user with the given userId
-    const threads = await User.findOne({ id: userId }).populate({
+    const threads = await User.findOne({ id: userId, isAnonym: false }).populate({
       path: "threads",
       model: Thread,
       populate: [
@@ -99,7 +100,7 @@ export async function fetchUsers({
   userId,
   searchString = "",
   pageNumber = 1,
-  pageSize = 20,
+  pageSize = 10,
   sortBy = "desc",
 }: {
   userId: string;
