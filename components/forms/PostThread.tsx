@@ -19,6 +19,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 import { ThreadValidation } from "@/lib/validations/thread";
 import { createThread } from "@/lib/actions/thread.actions";
+import { MouseEventHandler } from "react";
 
 
 interface Props {
@@ -27,10 +28,7 @@ interface Props {
   name: string;
 }
 
-function postAnonym(){
-  var isAnonymSelect = true;
-  console.log('hello world')
-}
+var isAnonymSelect = false;
 
 function PostThread(this: any, { userId, likes, name }: Props) {
   const router = useRouter();
@@ -52,7 +50,7 @@ function PostThread(this: any, { userId, likes, name }: Props) {
       author: userId,
       path: pathname,
       likes: [],
-      isAnonym: false,
+      isAnonym: isAnonymSelect,
     });
 
     router.push("/");
@@ -81,8 +79,11 @@ function PostThread(this: any, { userId, likes, name }: Props) {
         />
 
         <div className="btnContainer">
-        <Button type='submit' className='bg-primary-500 rounded-2xl btn'>
+        <Button onClick={() => isAnonymSelect = false} type='submit' className='bg-primary-500 rounded-2xl btn'>
           Опубликовать как {name}
+        </Button>
+        <Button onClick={() => isAnonymSelect = true} type='submit' className='bg-primary-500 rounded-2xl btn'>
+          Опубликовать анонимно
         </Button>
         </div>
       </form>
