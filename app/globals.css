@@ -269,6 +269,30 @@
   font-size: 21px;
 }
 
+.footerDiv {
+  margin-top: 48px;
+  padding: 24px 24px;
+  background: #15151c;
+  border-radius: 24px;
+}
+
+.footerTitle {
+  font-family: 'title';
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.footerLink {
+  color: #d24bff;
+  text-decoration: underline #d24bff 1px;
+}
+
+.footerDot {
+  color: #ffffff;
+  font-size: 20px;
+}
+
 @media screen and (max-width: 400px) {
   .title {
     font-size: 18px;

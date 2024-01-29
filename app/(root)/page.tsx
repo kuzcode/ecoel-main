@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 
 import ThreadCard from "@/components/cards/ThreadCard";
 import Pagination from "@/components/shared/Pagination";
+import Footer from "@/components/shared/Footer";
 
 import { fetchPosts } from "@/lib/actions/thread.actions";
 import { fetchUser } from "@/lib/actions/user.actions";
@@ -60,6 +61,9 @@ async function Home({
         pageNumber={searchParams?.page ? +searchParams.page : 1}
         isNext={result.isNext}
       />
+
+
+      <Footer />
     </>
   );
 }
