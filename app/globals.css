@@ -293,6 +293,28 @@
   font-size: 20px;
 }
 
+.rulesTitle {
+  font-family: 'title';
+  color: #fff;
+  font-size: 26px;
+  margin: -24px 0;
+}
+
+.rulesDiv {
+  margin-top: 48px;
+}
+
+.rulesP {
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.rulesDiv li {
+  list-style-type:disc;
+  color: #fff;
+  margin: -6px 0 0 28px;
+}
+
 @media screen and (max-width: 400px) {
   .title {
     font-size: 18px;
