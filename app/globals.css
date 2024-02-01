@@ -283,7 +283,7 @@
   margin-top: 0;
 }
 
-.footerLink {
+.link {
   color: #d24bff;
   text-decoration: underline #d24bff 1px;
 }
@@ -293,23 +293,23 @@
   font-size: 20px;
 }
 
-.rulesTitle {
+.branchTitle {
   font-family: 'title';
   color: #fff;
   font-size: 26px;
   margin: -24px 0;
 }
 
-.rulesDiv {
+.branchDiv {
   margin-top: 48px;
 }
 
-.rulesP {
+.branchDiv p {
   color: #ffffff;
   margin-bottom: 12px;
 }
 
-.rulesDiv li {
+.branchDiv li {
   list-style-type:disc;
   color: #fff;
   margin: -6px 0 0 28px;

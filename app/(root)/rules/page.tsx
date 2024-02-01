@@ -3,16 +3,19 @@ import Footer from "@/components/shared/Footer";
 async function Rules() {
 
   return (
-    <><p className="rulesTitle">Правила форума Эко Эл</p>
-    <div className="rulesDiv">
-      <p className="rulesP">1) Категорически запрещено: </p>
+    <><p className="branchTitle">Правила форума Эко Эл</p>
+    <div className="branchDiv">
+      <p>1) Категорически запрещено: </p>
       <ul className="subList">
-        <li><p className="rulesP">Обсуждать политику</p></li>
-        <li><p className="rulesP">Спамить, флудить, вести себя неадекватно</p></li>
-        <li><p className="rulesP">Притворяться другой личностью</p></li>
+        <li><p>Обсуждать политику</p></li>
+        <li><p>Спамить, флудить</p></li>
+        <li><p>Притворяться другой личностью</p></li>
       </ul>
-      <p className="rulesP">2) Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quam doloribus. Perferendis omnis necessitatibus exercitationem officiis saepe laborum voluptatum. Facere tempora, pariatur officiis porro ut minima totam vel obcaecati maiores.</p>
-      <p className="rulesP">3) Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quam doloribus. Perferendis omnis necessitatibus exercitationem officiis saepe laborum voluptatum. Facere tempora, pariatur officiis porro ut minima totam vel obcaecati maiores.</p>
+      <p>2) На форуме можно: </p>
+      <ul className="subList">
+        <li><p>Быть свободным</p></li>
+        <li><p>Быть человеком</p></li>
+      </ul>
     </div></>
   );
 }
