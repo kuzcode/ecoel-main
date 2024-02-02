@@ -4,6 +4,7 @@ import Link from "next/link";
 import { formatDateString } from "@/lib/utils";
 import DeleteThread from "../forms/DeleteThread";
 import LikeThread from "../forms/LikeThread";
+import ShareThread from "../forms/ShareThread";
 import { threadId } from "worker_threads";
 
 interface Props {
@@ -54,27 +55,27 @@ function ThreadCard({
       <div className='flex items-start justify-between'>
         <div className='flex w-full flex-1 flex-row gap-4'>
           <div className='flex flex-col items-center'>
-          {isAnonym ? (
+            {isAnonym ? (
               <Link href={'/anonym'} className='relative h-11 w-11'>
-              
-              <Image
-                src={'/anonym.png'}
-                alt='user_community_image'
-                fill
-                className='cursor-pointer rounded-full'
-              />
-            </Link>
-              
+
+                <Image
+                  src={'/anonym.png'}
+                  alt='user_community_image'
+                  fill
+                  className='cursor-pointer rounded-full'
+                />
+              </Link>
+
             ) : (
               <Link href={`/profile/${author.id}`} className='relative h-11 w-11'>
-              
-              <Image
-                src={author.image}
-                alt='user_community_image'
-                fill
-                className='cursor-pointer rounded-full'
-              />
-            </Link>
+
+                <Image
+                  src={author.image}
+                  alt='user_community_image'
+                  fill
+                  className='cursor-pointer rounded-full'
+                />
+              </Link>
 
             )}
           </div>
@@ -82,13 +83,13 @@ function ThreadCard({
           <div className='flex w-full flex-col'>
             {isAnonym ? (
               <>
-              <Link href={'/anonym'} className='w-fit'>
-              <div className="row">
-                <h4 className='cursor-pointer text-base-semibold text-light-1'>
-                Анонимный пост
-              </h4>
-                <div className="verif v2"></div>
-                </div>
+                <Link href={'/anonym'} className='w-fit'>
+                  <div className="row">
+                    <h4 className='cursor-pointer text-base-semibold text-light-1'>
+                      Анонимный пост
+                    </h4>
+                    <div className="verif v2"></div>
+                  </div>
                 </Link></>
             ) : (
               <Link href={`/profile/${author.id}`} className='w-fit'>
@@ -103,9 +104,9 @@ function ThreadCard({
               </Link>
             )}
 
-            
-              <p className='mt-2 text-small-regular text-light-2'>{content}</p>
-            
+
+            <p className='mt-2 text-small-regular text-light-2'>{content}</p>
+
 
             <div className={`${isComment && "mb-10"} mt-5 flex flex-col gap-3`}>
               <div className='flex gap-3.5 row'>
@@ -131,12 +132,8 @@ function ThreadCard({
                     className='cursor-pointer object-contain'
                   />
                 </Link>
-                <Image
-                  src='/assets/repost.svg'
-                  alt='share'
-                  width={24}
-                  height={24}
-                  className='cursor-pointer object-contain'
+                <ShareThread
+                  threadId={'https://ecoel.vercel.app/thread/' + id}
                 />
               </div>
 
