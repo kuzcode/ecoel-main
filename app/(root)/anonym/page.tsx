@@ -1,7 +1,5 @@
 import Footer from "@/components/shared/Footer";
-
 async function Anonym() {
-
   return (
     <><p className="branchTitle">Анонимные посты на форуме</p>
     <div className="branchDiv">
@@ -14,5 +12,4 @@ async function Anonym() {
     </div></>
   );
 }
-
 export default Anonym;

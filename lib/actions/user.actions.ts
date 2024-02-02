@@ -1,6 +1,7 @@
 "use server";
 import { FilterQuery, SortOrder } from "mongoose";
 import { revalidatePath } from "next/cache";
+import Community from "../models/community.model";
 import Thread from "../models/thread.model";
 import User from "../models/user.model";
 import { connectToDB } from "../mongoose";
@@ -9,6 +10,8 @@ export async function fetchUser(userId: string) {
     connectToDB();
     return await User.findOne({ id: userId }).populate({
       path: "communities",
+      model: Community,
+      strictPopulate: false,
     });
   } catch (error) {
     throw new Error(`Failed to fetch user: ${error}`);
@@ -34,18 +37,14 @@ export async function updateUser({
   try {
     connectToDB();
     await User.findOneAndUpdate(
-      { id: userId },
-      {
+      { id: userId },{
         username: username.toLowerCase(),
         name,
         bio,
         image,
         onboarded: true,
-        email: "",
-      },
-      { upsert: true }
+      },{ upsert: true }
     );
-
     if (path === "/profile/edit") {
       revalidatePath(path);
     }
@@ -59,18 +58,14 @@ export async function fetchUserPosts(userId: string) {
     const threads = await User.findOne({ id: userId, isAnonym: false }).populate({
       path: "threads",
       model: Thread,
-      populate: [
-        {
+      populate: [{
           path: "children",
           model: Thread,
           populate: {
             path: "author",
             model: User,
             select: "name image id",
-          },
-        },
-      ],
-    });
+          },},],});
     return threads;
   } catch (error) {
     console.error("Error fetching user threads:", error);
@@ -101,8 +96,7 @@ export async function fetchUsers({
       query.$or = [
         { username: { $regex: regex } },
         { name: { $regex: regex } },
-      ];
-    }
+      ];}
     const sortOptions = { createdAt: sortBy };
     const usersQuery = User.find(query)
       .sort(sortOptions)
@@ -115,8 +109,7 @@ export async function fetchUsers({
   } catch (error) {
     console.error("Error fetching users:", error);
     throw error;
-  }
-}
+  }}
 export async function getActivity(userId: string) {
   try {
     connectToDB();

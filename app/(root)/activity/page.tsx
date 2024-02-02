@@ -2,23 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { currentUser } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
-
 import { fetchUser, getActivity } from "@/lib/actions/user.actions";
-
 async function Page() {
   const user = await currentUser();
   if (!user) return null;
-
   const userInfo = await fetchUser(user.id);
   if (!userInfo?.onboarded) redirect("/onboarding");
-
   const activity = await getActivity(userInfo._id);
-
   return (
     <>
       <h1 className='head-text text-left'>Уведомления</h1>
       <p className='mt-3 text-base-regular text-light-2 bottom24px'>Будьте в курсе ✨</p>
-
       <section className='mt-10 flex flex-col gap-5'>
         {activity.length > 0 ? (
           <>
@@ -49,5 +43,4 @@ async function Page() {
     </>
   );
 }
-
 export default Page;
