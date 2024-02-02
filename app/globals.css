@@ -300,6 +300,10 @@
   margin: -24px 0;
 }
 
+.likeImg {
+  padding-top: 2px;
+}
+
 .branchDiv {
   margin-top: 48px;
 }

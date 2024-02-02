@@ -55,7 +55,7 @@ function ThreadCard({
         <div className='flex w-full flex-1 flex-row gap-4'>
           <div className='flex flex-col items-center'>
           {isAnonym ? (
-              <Link href={`https://ya.ru/`} className='relative h-11 w-11'>
+              <Link href={'/anonym'} className='relative h-11 w-11'>
               
               <Image
                 src={'/anonym.png'}
@@ -82,7 +82,7 @@ function ThreadCard({
           <div className='flex w-full flex-col'>
             {isAnonym ? (
               <>
-              <Link href={`https://ya.ru/`} className='w-fit'>
+              <Link href={'/anonym'} className='w-fit'>
               <div className="row">
                 <h4 className='cursor-pointer text-base-semibold text-light-1'>
                 Анонимный пост
@@ -110,9 +110,6 @@ function ThreadCard({
             <div className={`${isComment && "mb-10"} mt-5 flex flex-col gap-3`}>
               <div className='flex gap-3.5 row'>
                 <button className="row">
-                  <p className='mt-1 text-subtle-medium text-gray-1 right2px'>
-                    {likes.length}
-                  </p>
                   <LikeThread
                     threadId={JSON.stringify(id)}
                     currentUserId={currentUserId}
