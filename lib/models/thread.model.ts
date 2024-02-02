@@ -11,10 +11,6 @@ const threadSchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
-  community: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Community",
-  },
   likes:{
     type: Array,
     required: true,
@@ -37,7 +33,5 @@ const threadSchema = new mongoose.Schema({
     },
   ],
 });
-
 const Thread = mongoose.models.Thread || mongoose.model("Thread", threadSchema);
-
 export default Thread;

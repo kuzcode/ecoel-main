@@ -2,7 +2,6 @@
 
 import * as z from "zod";
 import { useForm } from "react-hook-form";
-import { useOrganization } from "@clerk/nextjs";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -33,9 +32,6 @@ var isAnonymSelect = false;
 function PostThread(this: any, { userId, likes, name }: Props) {
   const router = useRouter();
   const pathname = usePathname();
-
-  const { organization } = useOrganization();
-
   const form = useForm<z.infer<typeof ThreadValidation>>({
     resolver: zodResolver(ThreadValidation),
     defaultValues: {

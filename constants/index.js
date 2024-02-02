@@ -31,9 +31,3 @@ export const profileTabs = [
   { value: "replies", label: "Ответы", icon: "/assets/members.svg" },
   { value: "tagged", label: "Отметки", icon: "/assets/tag.svg" },
 ];
-
-export const communityTabs = [
-  { value: "threads", label: "Записи", icon: "/assets/reply.svg" },
-  { value: "members", label: "Участники", icon: "/assets/members.svg" },
-  { value: "requests", label: "Запросы", icon: "/assets/request.svg" },
-];
