@@ -44,7 +44,15 @@ function LikeThread({
           height={22}
           className='cursor-pointer object-contain likeImg'
           onClick={async () => {
-            setCount(count - 1);
+            if (likes.includes(currentUserId)) {
+              setCount(count - 1);
+              var index = likes.indexOf(currentUserId)
+              likes.splice(index)
+            }
+            else {
+              setCount(count + 1);
+              likes.push(currentUserId)
+            }
             await dislikeThread(JSON.parse(threadId), currentUserId, likes);
             if (!parentId || !isComment) {
             }
@@ -61,7 +69,15 @@ function LikeThread({
         height={22}
         className='cursor-pointer object-contain likeImg'
         onClick={async () => {
-          setCount(count + 1);
+          if (likes.includes(currentUserId)) {
+            setCount(count - 1);
+            var index = likes.indexOf(currentUserId)
+            likes.splice(index)
+          }
+          else {
+            setCount(count + 1);
+            likes.push(currentUserId)
+          }
           await likeThread(JSON.parse(threadId), currentUserId, likes);
           if (!parentId || !isComment) {
           }
