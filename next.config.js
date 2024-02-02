@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
+
+/** @type {import('next').NextConfig} */
+ 
 const nextConfig = {
   experimental: {
     serverActions: true,
+    serverActionsBodySizeLimit: '4mb',
     serverComponentsExternalPackages: ["mongoose"],
   },
   eslint: {

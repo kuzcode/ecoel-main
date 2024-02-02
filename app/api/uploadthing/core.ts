@@ -9,9 +9,19 @@ const f = createUploadthing();
 
 const getUser = async () => await currentUser();
 
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: '4mb',
+    },
+  },
+  // Specifies the maximum allowed duration for this function to execute (in seconds)
+  maxDuration: 20,
+}
+
 export const ourFileRouter = {
   // Define as many FileRoutes as you like, each with a unique routeSlug
-  media: f({ image: { maxFileSize: "1MB", maxFileCount: 1 } })
+  media: f({ image: { maxFileSize: "4MB", maxFileCount: 1 } })
     // Set permissions and file types for this FileRoute
     .middleware(async (req) => {
       // This code runs on your server before upload

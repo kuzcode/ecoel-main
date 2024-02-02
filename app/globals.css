@@ -250,7 +250,7 @@
 
 .profileText {
   width: auto;
-  max-width: min-content;
+  max-width: calc(100vw - 200px);
 }
 
 .center {
