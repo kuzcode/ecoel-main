@@ -25,7 +25,6 @@ export const sidebarLinks = [
     label: "Профиль",
   },
 ];
-
 export const profileTabs = [
   { value: "threads", label: "Записи", icon: "/assets/reply.svg" },
   { value: "replies", label: "Ответы", icon: "/assets/members.svg" },

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {currentUser} from "@clerk/nextjs";
 import {redirect} from "next/navigation";
 import {profileTabs} from "@/constants";
@@ -12,25 +11,14 @@ if (!user) return null;
 const userInfo = await fetchUser(params.id);
 if (!userInfo?.onboarded) redirect("/onboarding");
 return (<section><ProfileHeader
-accountId={userInfo.id}
-authUserId={user.id}
-name={userInfo.name}
-imgUrl={userInfo.image}
-bio={userInfo.bio}
-username={userInfo.username}
-verif={userInfo.verif}/>
+accountId={userInfo.id}authUserId={user.id}name={userInfo.name}imgUrl={userInfo.image}bio={userInfo.bio}username={userInfo.username}verif={userInfo.verif}/>
 <div className='mt-9'>
 <Tabs defaultValue='threads' className='w-full'>
 {profileTabs.map((tab) => (
-<TabsContent
-key={`content-${tab.label}`}
-value={tab.value}
-className='w-full text-light-1'>
+<TabsContent key={`content-${tab.label}`}value={tab.value}className='w-full text-light-1'>
 {/* @ts-ignore */}
 <ThreadsTab
-currentUserId={user.id}
-accountId={userInfo.id}
-accountType='User'/>
+currentUserId={user.id}accountId={userInfo.id}accountType='User'/>
 </TabsContent>
 ))}</Tabs></div></section>);}
 export default Page;
