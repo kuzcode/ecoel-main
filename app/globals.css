@@ -169,99 +169,57 @@
   max-width: calc(100vw - 200px);
 }
 .center {
-  display: flex;
-  justify-content: center;
-  margin-top: 24px;
-}
-
+display:flex;
+justify-content:center;
+margin-top:24px;}
 .readOnlyText {
-  background-color: #e772ff;
-  color: #5c5c7b;
-}
-
+background-color:#e772ff;
+color:#5c5c7b;}
 .title {
-  font-family: 'title';
-  font-size: 21px;
-}
-
+font-family:'title';
+font-size:21px;}
 .footerDiv {
-  margin-top: 48px;
-  padding: 24px 24px;
-  background: #15151c;
-  border-radius: 24px;
-}
-
+margin-top:48px;
+padding:24px 24px;
+background:#15151c;
+border-radius:24px;}
 .footerTitle {
-  font-family: 'title';
-  font-size: 24px;
-  color: #ffffff;
-  margin-top: 0;
-}
-
+font-family:'title';
+font-size:24px;
+color:#ffffff;
+margin-top:0;}
 .link {
-  color: #d24bff;
-  text-decoration: underline #d24bff 1px;
-}
-
+color:#d24bff;
+text-decoration:underline #d24bff 1px;}
 .footerDot {
-  color: #ffffff;
-  font-size: 20px;
-}
-
+color:#ffffff;
+font-size:20px;}
 .branchTitle {
-  font-family: 'title';
-  color: #fff;
-  font-size: 26px;
-  margin: -24px 0;
-}
-
+font-family:'title';
+color:#fff;
+font-size:26px;
+margin:-24px 0;}
 .likeImg {
-  padding-top: 2px;
-}
-
+padding-top:2px;}
 .branchDiv {
-  margin-top: 48px;
-}
-
-.branchDiv p {
-  color: #ffffff;
-  margin-bottom: 12px;
-}
-
-.branchDiv li {
-  list-style-type:disc;
-  color: #fff;
-  margin: -6px 0 0 28px;
-}
-
-@media screen and (max-width: 400px) {
-  .title {
-    font-size: 18px;
-    margin-left: -8px;
-  }
-
-  .topbar {
-    padding-left: 12px;
-  }
-}
-
-@media screen and (max-width: 340px) {
-  .title {
-    font-size: 17px;
-    margin-left: -10px;
-  }
-
-  .topbar {
-    padding-left: 10px;
-  }
-}
-
-@media screen and (max-width: 315px) {
-  .title {
-    display: none;
-  }
-
-  .topbar {
-    padding-left: 24px;
-  }
-}
+margin-top:48px;}
+.branchDiv p{
+color:#ffffff;
+margin-bottom:12px;}
+.branchDiv li{
+list-style-type:disc;
+color:#fff;
+margin:-6px 0 0 28px;}
+@media screen and (max-width:400px) {
+.title{
+font-size:18px;
+margin-left:-8px;}
+.topbar {padding-left:12px;}}
+@media screen and (max-width:340px) {
+.title{
+font-size:17px;
+margin-left:-10px;}
+.topbar {padding-left:10px;}}
+@media screen and (max-width:315px) {
+.title {display:none;}
+.topbar {padding-left:24px;}}
