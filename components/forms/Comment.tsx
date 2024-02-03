@@ -42,8 +42,7 @@ function Comment({ threadId, currentUserImg, currentUserId, likes }: Props) {
       threadId,
       values.thread,
       JSON.parse(currentUserId),
-      pathname,
-      likes
+      pathname
     );
 
     form.reset();
