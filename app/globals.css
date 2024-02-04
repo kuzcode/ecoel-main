@@ -220,3 +220,12 @@ margin-left:-10px;}
 @media screen and (max-width:315px) {
 .title {display:none;}
 .topbar {padding-left:24px;}}
+
+.centerDiv{
+  width: 100vw;
+  height: 100vh;
+}
+.deleteAlert {
+  margin: 0 auto;
+  background: #5c5c7b;
+}
