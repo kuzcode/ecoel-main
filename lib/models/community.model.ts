@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-
 const communitySchema = new mongoose.Schema({
   id: {
     type: String,
@@ -33,8 +32,5 @@ const communitySchema = new mongoose.Schema({
     },
   ],
 });
-
-const Community =
-  mongoose.models.Community || mongoose.model("Community", communitySchema);
-
+const Community =mongoose.models.Community || mongoose.model("Community", communitySchema);
 export default Community;

@@ -7,11 +7,10 @@ const pathname = usePathname();const router = useRouter();
 if(currentUserId!==authorId || pathname==="/")return null;
 return(
 <Image src='/assets/delete.svg' alt='delte' width={20} height={20} className='cursor-pointer object-contain' onClick={async () => {
-var confirmDel = confirm('Вы действительно хотите удалить эту публикацию?')
-{ confirmDel ? (
+var confirmDel = confirm('Вы действительно хотите удалить публикацию?')
+{confirmDel ? (
 await deleteThread(JSON.parse(threadId), pathname)) : (
-    confirmDel = false)}
+confirmDel = false)}
 if(!parentId || !isComment) { router.push("/"); }
 }}/>);}
-
 export default DeleteThread;

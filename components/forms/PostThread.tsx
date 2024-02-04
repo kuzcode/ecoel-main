@@ -29,8 +29,7 @@ await createThread({
 text:values.thread,
 author:userId,path: pathname,
 likes:[],isAnonym: true,});}
-router.push("/");
-};
+router.push("/");};
 return(<Form {...form}>
 <form
 className='mt-10 flex flex-col justify-start gap-10'
