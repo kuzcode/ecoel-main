@@ -10,8 +10,8 @@ import RightSidebar from "@/components/shared/RightSidebar";
 import Topbar from "@/components/shared/Topbar";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
-title: "Эко-Эл форум",
-description: "Эко-Эл форум — укромный уголок учеников прекрасной школы.",};
+title: "ЭкоЭл journal",
+description: "ЭкоЭл journal — укромный уголок учеников прекрасной школы ЭкоЭл",};
 export default function RootLayout({children,}: {children: React.ReactNode;}) {
 return (<ClerkProvider appearance={{baseTheme: dark,}}>
 <html lang='en'>

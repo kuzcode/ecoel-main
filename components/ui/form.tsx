@@ -9,8 +9,7 @@ type FormFieldContextValue<
 TFieldValues extends FieldValues = FieldValues,
 TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > = {
-name: TName
-}
+name: TName}
 const FormFieldContext = React.createContext<FormFieldContextValue>(
   {} as FormFieldContextValue
 )
@@ -135,13 +134,8 @@ const FormMessage = React.forwardRef<
       id={formMessageId}
       className={cn("text-sm font-medium text-red-500 dark:text-red-900", className)}
       {...props}
-    >
-      {body}
-    </p>
-  )
-})
+    >{body}</p>)})
 FormMessage.displayName = "FormMessage"
-
 export {
   useFormField,
   Form,
