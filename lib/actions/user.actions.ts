@@ -20,7 +20,6 @@ name:string;
 bio:string;
 image:string;
 path:string;
-email:string;
 verif:boolean;}
 export async function updateUser({
 userId,
@@ -37,7 +36,6 @@ username:username.toLowerCase(),
 name,
 bio,
 image,
-email:username+'@ecoel.vercel.app',
 onboarded:true,},{upsert:true }
 );
 if (path==="/profile/edit"){
