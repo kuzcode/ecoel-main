@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { Button } from "../ui/button";
-interface Props {id: string;name: string;username: string;imgUrl: string;personType: string;verif: boolean;}
-function UserCard({ id, name, username, imgUrl, verif }: Props) {
+import{useRouter}from "next/navigation";
+import{Button}from "../ui/button";
+interface Props {id:string;name:string;username:string;imgUrl:string;personType:string;verif:boolean;}
+function UserCard({id,name,username,imgUrl,verif}:Props) {
 const router = useRouter();
 return (<article className='user-card'>
 <div className='user-card_avatar'><div className='relative h-12 w-12'>

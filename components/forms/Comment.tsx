@@ -1,13 +1,13 @@
 "use client";
-import {z}from"zod";
+import{z}from"zod";
 import Image from"next/image";
 import{useForm}from"react-hook-form";import{usePathname}from"next/navigation";import{zodResolver}from"@hookform/resolvers/zod";import{Form,FormControl,FormField,FormItem,FormLabel,}from"@/components/ui/form";import{Input}from"../ui/input";import{Button}from"../ui/button";import{CommentValidation}from"@/lib/validations/thread";import{addCommentToThread}from"@/lib/actions/thread.actions";
 interface Props {threadId: string;currentUserImg: string;currentUserId: string;likes: Array<string>;}
 function Comment({ threadId, currentUserImg, currentUserId, likes }: Props) {
-const pathname = usePathname();
-const form = useForm<z.infer<typeof CommentValidation>>({
+const pathname=usePathname();
+const form=useForm<z.infer<typeof CommentValidation>>({
 resolver: zodResolver(CommentValidation),
-defaultValues: {thread: "",},});const onSubmit = async (values: z.infer<typeof CommentValidation>) => {
+defaultValues: {thread: "",},});const onSubmit=async (values: z.infer<typeof CommentValidation>) => {
 await addCommentToThread(
 threadId,values.thread,JSON.parse(currentUserId),pathname);form.reset();};
 return (<Form{...form}><form className='comment-form' onSubmit={form.handleSubmit(onSubmit)}><FormField

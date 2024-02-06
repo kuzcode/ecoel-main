@@ -11,7 +11,7 @@ if (!user) return null;
 const userInfo = await fetchUser(params.id);
 if (!userInfo?.onboarded) redirect("/onboarding");
 return (<section><ProfileHeader
-    accountId={userInfo.id} authUserId={user.id} name={userInfo.name} imgUrl={userInfo.image} bio={userInfo.bio} username={userInfo.username} verif={userInfo.verif}/>
+accountId={userInfo.id} authUserId={user.id} name={userInfo.name} imgUrl={userInfo.image} bio={userInfo.bio} username={userInfo.username} verif={userInfo.verif}/>
 <div className='mt-9'>
 <Tabs defaultValue='threads' className='w-full'>
 {profileTabs.map((tab) => (
