@@ -5,7 +5,7 @@ import User from"../models/user.model";
 import Thread from"../models/thread.model";
 export async function fetchPosts(pageNumber=1,pageSize=20){
 connectToDB();
-const skipAmount=(pageNumber - 1) * pageSize;
+const skipAmount=(pageNumber - 1)* pageSize;
 const postsQuery=Thread.find({parentId:{$in:[null,undefined]}})
 .sort({createdAt:"desc"})
 .skip(skipAmount)
@@ -38,7 +38,7 @@ for(const childThread of childThreads){
 const descendants=await fetchAllChildThreads(childThread._id);
 descendantThreads.push(childThread,...descendants);}
 return descendantThreads;}
-export async function likeThread(id:string,currentUserId:string,likes:Array<string> ):Promise<void>{
+export async function likeThread(id:string,currentUserId:string,likes:Array<string>):Promise<void>{
 try{
 connectToDB();
 const mainThread=await Thread.findById(id).populate("");
@@ -48,7 +48,7 @@ const likedThread=await Thread.findByIdAndUpdate(
 id,{$addToSet:{likes:currentUserId}},{new:true}
 );}catch(error:any){
 throw new Error(`Failed to like thread:${error.message}`);}}
-export async function dislikeThread(id:string,currentUserId:string,likes:Array<string> ):Promise<void>{
+export async function dislikeThread(id:string,currentUserId:string,likes:Array<string>):Promise<void>{
 try{
 connectToDB();
 const mainThread=await Thread.findById(id).populate("");

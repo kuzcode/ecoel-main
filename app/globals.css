@@ -19,7 +19,7 @@
 @apply mt-10 flex w-full items-center justify-center gap-5;}.rightsidebar{
 @apply sticky right-0 top-0 z-20 flex h-screen w-fit flex-col justify-between gap-12 overflow-auto border-l border-l-dark-4 bg-dark-2 px-10 pb-6 pt-28 max-xl:hidden;}}@layer utilities{
 .css-invert{
-@apply invert-[50%]brightness-200;}.custom-scrollbar::-webkit-scrollbar{
+@apply invert-[50%] brightness-200;}.custom-scrollbar::-webkit-scrollbar{
 width:3px;height:3px;border-radius:2px;}.custom-scrollbar::-webkit-scrollbar-track{
 background:#09090a;}.custom-scrollbar::-webkit-scrollbar-thumb{
 background:#5c5c7b;border-radius:50px;}.custom-scrollbar::-webkit-scrollbar-thumb:hover{
@@ -58,6 +58,6 @@ margin-top:48px;}.branchDiv p{
 color:#ffffff;margin-bottom:12px;}.branchDiv li{
 list-style-type:disc;color:#fff;margin:-6px 0 0 28px;}@media screen and(max-width:400px){
 .title{font-size:18px;margin-left:-8px;}.topbar{padding-left:12px;}}@media screen and(max-width:340px){
-.title{font-size:17px;margin-left:-10px;}.topbar{padding-left:10px;}}@media screen and(max-width:315px){.title{display:none;}.topbar{padding-left:24px;}}.centerDiv{
+.title{font-size:17px;margin-left:-10px;}.topbar{padding-left:10px;}}@media screen and (max-width:315px){.title{display:none;}.topbar{padding-left:24px;}}.centerDiv{
 width:100vw;height:100vh;}.deleteAlert{
 margin:0 auto;background:#5c5c7b;}

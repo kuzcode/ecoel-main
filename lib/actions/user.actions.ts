@@ -49,11 +49,11 @@ pageSize?:number;
 sortBy?:SortOrder;}){
 try{
 connectToDB();
-const skipAmount=(pageNumber-1) * pageSize;
+const skipAmount=(pageNumber-1)* pageSize;
 const regex=new RegExp(searchString,"i");
 const query:FilterQuery<typeof User>={
 id:{$ne:userId},};
-if(searchString.trim() !==""){
+if(searchString.trim()!==""){
 query.$or=[
 {username:{$regex:regex}},{name:{$regex:regex}},];}
 const sortOptions={createdAt:sortBy};
