@@ -10,9 +10,9 @@ const options:Intl.DateTimeFormatOptions ={
 year:"numeric",
 month:"short",
 day:"numeric",};
-const date = new Date(dateString);
-const formattedDate = date.toLocaleDateString(undefined, options);
-const time = date.toLocaleTimeString([],{
+const date=new Date(dateString);
+const formattedDate=date.toLocaleDateString(undefined, options);
+const time=date.toLocaleTimeString([],{
 hour:"numeric",
 minute:"2-digit",});
 return`${time}-${formattedDate}`;}
@@ -22,4 +22,4 @@ return "No Threads";
 }else{
 const threadCount=count.toString().padStart(2,"0");
 const threadWord=count===1?"Thread":"Threads";
-return`${threadCount} ${threadWord}`;}}
+return`${threadCount}${threadWord}`;}}
