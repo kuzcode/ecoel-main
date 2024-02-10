@@ -13,7 +13,7 @@ const userInfo=await fetchUser(user.id);
 if(!userInfo?.onboarded)redirect("/onboarding");
 const result=await fetchPosts(searchParams.page?+searchParams.page:1,15);
 return(<><Analytics />
-<link rel="icon"href="../favicon.ico"sizes="32x32" />
+<link rel="icon"href="../logo.png"sizes="32x32" />
 <h1 className='head-text text-left'>Главная</h1>
 <p className='mt-3 text-base-regular text-light-2'>Любая мысль ✨</p>
 <section className='mt-9 flex flex-col gap-10'>
