@@ -1,1 +1,1 @@
-import{SignUp}from"@clerk/nextjs";export default function Page(){return(<div className="center bg-dark-1"><SignUp/></div>);}
+import{SignUp}from"@clerk/nextjs";export default function Page(){return(<div className="center"><SignUp/></div>);}
