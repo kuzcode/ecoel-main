@@ -2,7 +2,7 @@
 var isAnonymSelect=false;var isLoading=false;function PostThread(this:any, { userId, likes, name }:Props) {
 const router=useRouter();const pathname=usePathname();const form=useForm<z.infer<typeof ThreadValidation>>({
 resolver:zodResolver(ThreadValidation),defaultValues:{thread:"",accountId:userId,},});const onSubmit=async(values:z.infer<typeof ThreadValidation>) => {
-if(isAnonymSelect == false) {
+if(isAnonymSelect==false) {
 await createThread({
 text:values.thread,author:userId,path:pathname,likes:[],isAnonym:false,});}else{
 await createThread({
