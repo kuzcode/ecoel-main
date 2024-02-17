@@ -1,5 +1,4 @@
 import{currentUser}from"@clerk/nextjs";import{redirect}from"next/navigation";import ThreadCard from"@/components/cards/ThreadCard";import Pagination from"@/components/shared/Pagination";import Footer from"@/components/shared/Footer";import{fetchPosts}from"@/lib/actions/thread.actions";import{fetchUser}from"@/lib/actions/user.actions";import{Analytics}from'@vercel/analytics/react';import{SpeedInsights}from"@vercel/speed-insights/next"
-<meta name="yandex-verification"content="7eaf324d55c594d4"/>
 async function Home({searchParams,}:{searchParams:{[key:string]:string|undefined};}){
 const user=await currentUser();
 if(!user)return null;
