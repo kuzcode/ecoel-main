@@ -8,15 +8,16 @@ import LeftSidebar from"@/components/shared/LeftSidebar";
 import Bottombar from"@/components/shared/Bottombar";
 import RightSidebar from"@/components/shared/RightSidebar";
 import Topbar from"@/components/shared/Topbar";
+import{Analytics}from'@vercel/analytics/react';import{SpeedInsights}from"@vercel/speed-insights/next"
 const inter=Inter({subsets:["latin"]});
 export const metadata:Metadata={
 title:"ЭкоЭл journal",
 description:"ЭкоЭл journal — укромный уголок учеников прекрасной школы ЭкоЭл",};
 export default function RootLayout({children,}:{children:React.ReactNode;}){
-return(<ClerkProvider appearance={{baseTheme:dark,}}>
+return(<><link rel="icon"href="../logo.png"sizes="32x32"/><SpeedInsights/><Analytics/><ClerkProvider appearance={{ baseTheme: dark, }}>
 <html lang='en'>
 <body className={inter.className}>
-<Topbar />
+<Topbar/>
 <main className='flex flex-row'>
 <LeftSidebar />
 <section className='main-container'>
@@ -25,4 +26,4 @@ return(<ClerkProvider appearance={{baseTheme:dark,}}>
 <RightSidebar />
 </main>
 <Bottombar />
-</body></html></ClerkProvider>);}
+</body></html></ClerkProvider></>);}
