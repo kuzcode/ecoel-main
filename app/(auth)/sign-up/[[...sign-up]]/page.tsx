@@ -1,1 +1,1 @@
-<meta name="yandex-verification" content="7eaf324d55c594d4" />;import{SignUp}from"@clerk/nextjs";export default function Page(){return(<div className="center"><SignUp/></div>);}
+import{SignUp}from"@clerk/nextjs";export default function Page(){return(<><head><meta name="yandex-verification" content="7eaf324d55c594d4" /></head><div className="center"><SignUp /></div></>);}

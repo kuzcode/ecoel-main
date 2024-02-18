@@ -1,4 +1,3 @@
-<meta name="yandex-verification" content="7eaf324d55c594d4" />
 import React from"react";
 import type{Metadata}from"next";
 import{Inter}from"next/font/google";
@@ -11,7 +10,7 @@ title:"Авторизация ЭкоЭл Journal",
 description:"Создайте ваш аккаунт для общения ✨",};
 export default function RootLayout({children,
 }:{children:React.ReactNode;}){
-return (<ClerkProvider appearance={{baseTheme: dark,}}>
-<html lang='en'>
-<body className={`${inter.className} bg-dark-1`}>{children}</body></html>
-</ClerkProvider>);}
+return (<><head><meta name="yandex-verification" content="7eaf324d55c594d4" /></head><ClerkProvider appearance={{ baseTheme: dark, }}>
+    <html lang='en'>
+        <body className={`${inter.className} bg-dark-1`}>{children}</body></html>
+</ClerkProvider></>);}
