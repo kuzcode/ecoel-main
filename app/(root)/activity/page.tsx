@@ -18,6 +18,6 @@ return(<>
 <Link key={activity._id}href={`/thread/${activity.parentId}`}>
 <article className='activity-card rounded-3xl'>
 <Image src={activity.author.image}alt='user_logo' width={20}height={20}className='rounded-full object-cover'/>
-<p className='!text-small-regular text-light-1'><span className='mr-1 text-primary-500'>{activity.author.name}</span>{" "}ответил(-а)на вашу запись</p>
+<p className='!text-small-regular text-light-1'><span className='mr-1 text-primary-500'>{activity.author.name}</span>{" "}ответил(-а) на вашу запись</p>
 </article></Link>))}</>):(<p className='!text-base-regular text-light-3'>Уведомлений пока нет</p>)}</section></>);}
 export default Page;
