@@ -181,3 +181,5 @@ height:100vh;}
 .deleteAlert{
 margin:0 auto;
 background:#5c5c7b;}.subtext{color:#5c5c7b;font-size:12px}
+.hoverScale{transition:.2s;}
+.hoverScale:hover{transform: scale(1.08);}
