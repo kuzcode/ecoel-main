@@ -79,3 +79,7 @@ path:"author",model:User,select:"name image _id",});
 return replies;}catch(error){
 console.error("Error fetching replies:",error);
 throw error;}}
+export async function addClusters(userId:string,clustersToAdd:Array<String>){try{
+connectToDB();
+await User.findByIdAndUpdate(userId,{$push:{clusters:clustersToAdd}});}catch(error){
+console.error("Error adding clusters:",error);throw error;}}

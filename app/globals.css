@@ -181,5 +181,64 @@ height:100vh;}
 .deleteAlert{
 margin:0 auto;
 background:#5c5c7b;}.subtext{color:#5c5c7b;font-size:12px}
-.hoverScale{transition:.2s;}
-.hoverScale:hover{transform: scale(1.08);}
+.container{
+background:#121218;
+margin-top:24px;
+padding:16px;
+border-radius:32px}
+.container .title2{
+margin:6px 0 -2px 8px;
+color:#fff;
+font-size:22px}
+.container li{
+margin-top:12px;
+max-width:180px;
+background:#212128;
+border-radius:16px;
+padding:8px}
+.container li h6{
+color:#fff}
+.container li h6 span{
+color:#ece7efa3;
+font-size:13px}
+.container li p{
+color:#aeaec4}
+.container li button{
+background:#d24bff;
+color:#fff;
+padding:2px 16px;
+border-radius:8px;
+margin-top:4px;
+width:100%}
+.basketBtn{
+background:#d24bff;
+color:#fff;
+padding:6px 36px;
+border-radius:14px;
+width:100%;
+max-width:400px;
+margin-top:calc(100vh - 300px)}
+.link{
+color:#d24bff;
+margin:2px 0 0 8px}
+.img{
+background:#3b3b4a;
+border-radius:8px;
+margin-bottom:6px}
+.floatRight{
+float:right;
+margin-right:42px}
+.basket{
+background:#20202897;
+padding:12px;
+position:fixed;
+border-radius:14px;
+margin-top:-64px;
+cursor:pointer;
+transition:.3s;
+backdrop-filter:blur(9px);
+-webkit-backdrop-filter:blur(9px)}
+.basketItem{
+color:#fff}
+.activeBasket{
+background:#52226395}

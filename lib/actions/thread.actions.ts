@@ -28,7 +28,7 @@ const createdThread=await Thread.create({
 text,author,path,likes,isAnonym,});
 if(isAnonym==false){
 await User.findByIdAndUpdate(author,{
-$push:{threads:createdThread._id},});}
+$push:{threads:createdThread._id}})}
 revalidatePath(path);}catch(error:any){
 throw new Error(`Failed to create thread:${error.message}`);}}
 async function fetchAllChildThreads(threadId:string):Promise<any[]>{

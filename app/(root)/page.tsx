@@ -11,5 +11,5 @@ return(<><link rel="icon"href="../logo.png"sizes="32x32"/><h1 className='head-te
 <p className='no-result'>Записи не найдены</p>):(<>{result.posts.map((post)=>(
 <ThreadCard key={post._id}id={post._id}currentUserId={user.id}parentId={post.parentId}content={post.text}author={post.author}createdAt={post.createdAt}comments={post.children}likes={post.likes}isAnonym={post.isAnonym}/>))}</>)}</section>
 <Pagination
-path='/'pageNumber={searchParams?.page?+searchParams.page:1}isNext={result.isNext}/><Footer/></>);}
+path='/'pageNumber={searchParams?.page?+searchParams.page:1}isNext={result.isNext}/><Footer/></>)}
 export default Home;
