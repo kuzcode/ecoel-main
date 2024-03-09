@@ -190,9 +190,13 @@ border-radius:32px}
 margin:6px 0 -2px 8px;
 color:#fff;
 font-size:22px}
+.container ul {
+display: flex;
+max-width: calc(100vw - 76px);
+overflow-x: auto;}
 .container li{
-margin-top:12px;
-max-width:180px;
+margin:12px 16px 0 0;
+width:180px;
 background:#212128;
 border-radius:16px;
 padding:8px}
@@ -224,15 +228,16 @@ margin:2px 0 0 8px}
 .img{
 background:#3b3b4a;
 border-radius:8px;
+min-width:160px;
 margin-bottom:6px}
 .floatRight{
 float:right;
-margin-right:42px}
+margin-right:48px}
 .basket{
 background:#20202897;
 padding:12px;
 position:fixed;
-border-radius:14px;
+border-radius:15px;
 margin-top:-64px;
 cursor:pointer;
 transition:.3s;
@@ -241,4 +246,5 @@ backdrop-filter:blur(9px);
 .basketItem{
 color:#fff}
 .activeBasket{
-background:#52226395}
+background:#ca37ff60}
+.displayNone{display:none}
