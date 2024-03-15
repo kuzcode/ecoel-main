@@ -2,31 +2,7 @@
 import Link from 'next/link';
 import Image from "next/image";
 import { useState } from 'react';
-
-export interface Item {
-    title: string;
-    price: number;
-    id: string;
-    amount: string;
-    added: number;
-}
-
-export const itemsList: Item[] = [
-    {
-        title: 'Twix Xtra',
-        price: 3.3,
-        id: "twix",
-        amount: "82г",
-        added: 0
-    },
-    {
-        title: 'Skittles',
-        price: 2.8,
-        id: "skittles",
-        amount: "38г",
-        added: 0
-    }
-];
+import { itemsList } from './data';
 
 function Delivery() {
     const [items, setItems] = useState(itemsList);

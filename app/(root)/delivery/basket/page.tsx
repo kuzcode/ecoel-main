@@ -1,5 +1,5 @@
 "use client";import Link from'next/link';import Image from"next/image";import { useState } from "react";
-import { itemsList } from '../page';
+import { itemsList } from '../data';
 
 function basket(){
     const [items, setItems] = useState(
