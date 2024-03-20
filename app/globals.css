@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face{font-family:title;src:url(../public/title.woff2);}
+@font-face{font-family:title;font-display:swap;src:url(../public/title.woff2);}
 @layer components{
 .main-container{
 @apply flex min-h-screen flex-1 flex-col items-center bg-dark-1 px-6 pb-10 pt-28 max-md:pb-32 sm:px-10;}
