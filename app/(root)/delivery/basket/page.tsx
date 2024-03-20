@@ -1,23 +1,39 @@
-"use client";import Link from'next/link';import Image from"next/image";
-import { newItemsList } from '../page';
-import { useState } from 'react';
+"use client";import Link from'next/link';import Image from"next/image";import { useState } from "react";
+import { itemsList } from '../data';
 
-const Basket = () => {
-
-console.log(newItemsList)
+function basket(){
+    const [items, setItems] = useState(
+        itemsList
+    );
+    for (var i = 0; i < items.length; i++) {
+        if (items[i].added == 0){
+            setItems(
+            items.filter(a =>
+        a.id !== items[i].id))}
+    }
+    
+    for(var i=0; i < items.length; i++){
+        if (items[i].added >= 1) {
 
 return(<>
 <div className="row"><h1 className='head-text text-left'>Корзина </h1><Link href='/delivery'><p className='link'> вернуться к меню</p></Link></div>
+
+
         <><div className="container"><h2 className='title2 head-text'>В корзине:</h2>
             <ul>
-                {newItemsList.map(product => (
+                {items.map(item => (
 
-                    <li key={product.id} id={product.id}><Image src={`/${product.id}.png`} alt={product.id} className="img" width={180} height={135} /><h6>{product.title} <span>· {product.amount}</span></h6><p>{product.price} BYN</p>
-                        <button onClick={() => product.added = product.added - 1}>Убрать ({product.added})</button></li>
+                    <li key={item.id} id={item.id}><Image src={`/${item.id}.png`} alt={item.id} className="img" width={180} height={135} /><h6>{item.title} <span>· {item.amount}</span></h6><p>{item.price} BYN</p>
+                        <button onClick={() => item.added = item.added - 1}>Убрать ({item.added})</button></li>
                 ))}
             </ul>
         </div><div className="center"><button className='basketBtn'>Оформить заказ</button></div></></>)}
-    
+    else {
+        return (
+            <><div className="row"><h1 className='head-text text-left'>Корзина </h1><Link href='/delivery'><p className='link'> вернуться к меню</p></Link></div><p className="basketItem">Товары пока не добавлены :(</p></>
+        )
+    }
+}}
 
 
-export default Basket;
+export default basket;
