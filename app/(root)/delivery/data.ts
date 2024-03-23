@@ -11,14 +11,14 @@ export interface Item {
 export const itemsList: Item[] = [
     {
         title: 'Twix Xtra',
-        price: 3.3,
+        price: 3.30,
         id: "twix",
         amount: "82г",
         added: 0
     },
     {
         title: 'Skittles',
-        price: 2.8,
+        price: 2.80,
         id: "skittles",
         amount: "38г",
         added: 0
