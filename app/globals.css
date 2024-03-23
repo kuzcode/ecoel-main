@@ -143,7 +143,8 @@ color:#ffffff;
 margin-top:0;}
 .link{
 color:#d24bff;
-text-decoration:underline #d24bff 1px;}
+text-decoration:underline #d24bff 1px;
+cursor:pointer}
 .footerDot{
 color:#ffffff;
 font-size:20px;}
@@ -267,8 +268,10 @@ background:#ca37ff60}
     border-radius: 24px;
     max-width: 420px;
     top: 60px;
-    max-height: calc(100vh - 150px);
+    height: calc(100vh - 150px);
     overflow-y: auto;
+    overflow-x: hidden;
+    transition: 0.5s;
 }
 
 .basketDiv .btn {
@@ -280,7 +283,7 @@ background:#ca37ff60}
     transition: .2s;
     font-size: 18px;
     width: 100%;
-    position: sticky;
+    bottom: 0;
     z-index: 600;
 }
 
@@ -298,6 +301,7 @@ background:#ca37ff60}
     float: right;
     margin: 10px 24px;
     transition: .1s;
+    z-index: 70;
 }
 .basketDiv .cancel:active {
     color: #e8eaf658;
@@ -311,4 +315,52 @@ background:#ca37ff60}
 .closed {
     display: none;
     opacity: 0;
+}
+
+.content {
+    top: 0;
+    padding-left: 0;
+    transition: .5s;
+    max-width: 100%;
+    position: absolute;
+}
+
+.leftContent {
+    top: 0;
+    margin-left: -100%;
+}
+
+.content2{
+    top: 0;
+    margin-left: 100%;
+    max-width: 100%;
+    padding: 12px 24px;
+    padding-left: 0;
+    transition: .5s;
+    width: 100%;
+    text-wrap: nowrap;
+}
+
+.content2 .link {
+    margin: -12px 0 16px 24px;
+
+}
+
+.content2 .point {
+    color: #aeaec4;
+    margin: 16px 0 2px 0;
+    margin-left: 24px;
+}
+
+select {
+    background: #212128;
+    color: #aeaec4;
+    padding: 4px 10px;
+    border-radius: 8px;
+    margin-left: 24px;
+}
+
+.rightContent{
+    top: 0;
+    margin-left: 0;
 }
