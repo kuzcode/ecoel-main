@@ -59,7 +59,7 @@ function Delivery() {
                         <p className='link' onClick={() => {
                             document.getElementById('content')?.classList.remove('leftContent')
                             document.getElementById('content2')?.classList.remove('rightContent')
-                        }}>🠔 к корзине</p>
+                        }}>⬅ к корзине</p>
 
                         <p className='point'>Выберите место доставки:</p>
                         <select>
@@ -74,7 +74,7 @@ function Delivery() {
                         </select>
 
                         <div className="center"><button className='btn' onClick={() => {
-                            alert('пизда')
+                            alert('анна тУркова')
                         }}>Закать</button>
                     </div>
                     </div>

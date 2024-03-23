@@ -283,11 +283,9 @@ background:#ca37ff60}
     transition: .2s;
     font-size: 18px;
     width: 100%;
-    bottom: 0;
-    z-index: 600;
 }
 
-.basketDiv h3 {
+.content h3 {
     color: #fff;
     font-weight: 600;
     font-size: 27px;
@@ -301,7 +299,9 @@ background:#ca37ff60}
     float: right;
     margin: 10px 24px;
     transition: .1s;
-    z-index: 70;
+    z-index: 999;
+    cursor: pointer;
+    position: relative;
 }
 .basketDiv .cancel:active {
     color: #e8eaf658;
@@ -331,19 +331,21 @@ background:#ca37ff60}
 }
 
 .content2{
-    top: 0;
+    transform: translate(0, -64px);
     margin-left: 100%;
-    max-width: 100%;
-    padding: 12px 24px;
+    padding: -100px 24px;
     padding-left: 0;
     transition: .5s;
-    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
     text-wrap: nowrap;
+    position: relative;
 }
 
 .content2 .link {
     margin: -12px 0 16px 24px;
-
 }
 
 .content2 .point {
@@ -363,4 +365,12 @@ select {
 .rightContent{
     top: 0;
     margin-left: 0;
+}
+
+.content2 h3 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 27px;
+    padding: 12px 24px;
+    z-index: 99999;
 }
