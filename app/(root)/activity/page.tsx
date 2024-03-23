@@ -13,7 +13,7 @@ return(<>
 <h1 className='head-text text-left'>Уведомления</h1>
 <p className='mt-3 text-base-regular text-light-2 bottom24px'>Будьте в курсе ✨</p>
 <section className='mt-10 flex flex-col gap-5'>
-{activity.length > 0 ?(<>
+{activity.length>0?(<>
 {activity.map((activity)=>(
 <Link key={activity._id}href={`/thread/${activity.parentId}`}>
 <article className='activity-card rounded-3xl'>

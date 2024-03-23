@@ -213,7 +213,11 @@ color:#fff;
 padding:2px 16px;
 border-radius:8px;
 margin-top:4px;
+transition: .2s;
 width:100%}
+.container li button:active{
+background:#d24bffc4;
+transform:scale(0.96)}
 .basketBtn{
 background:#d24bff;
 color:#fff;
@@ -240,11 +244,71 @@ position:fixed;
 border-radius:15px;
 margin-top:-64px;
 cursor:pointer;
-transition:.3s;
+transition:.2s;
+box-shadow: 0 0 30px #05050bc7;
 backdrop-filter:blur(9px);
 -webkit-backdrop-filter:blur(9px)}
+.basket:active{
+    transform: scale(0.9);
+}
 .basketItem{
 color:#fff}
 .activeBasket{
 background:#ca37ff60}
 .displayNone{display:none}
+
+
+.basketDiv {
+    position: fixed;
+    background: #121218;
+    z-index: 50;
+    margin: auto;
+    width: 90vw;
+    border-radius: 24px;
+    max-width: 420px;
+    top: 60px;
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+}
+
+.basketDiv .btn {
+    background:#d24bff;
+    color:#fff;
+    padding:3px 28px;
+    border-radius:15px;
+    margin:0 24px 20px 24px;
+    transition: .2s;
+    font-size: 18px;
+    width: 100%;
+    position: sticky;
+    z-index: 600;
+}
+
+.basketDiv h3 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 27px;
+    padding: 12px 24px;
+}
+
+.basketDiv .cancel {
+    color: #e8eaf685;
+    font-weight: 600;
+    font-size: 32px;
+    float: right;
+    margin: 10px 24px;
+    transition: .1s;
+}
+.basketDiv .cancel:active {
+    color: #e8eaf658;
+    transform: scale(0.9);
+}
+
+.bgBlured{
+    filter: blur(24px) brightness(0.7) opacity(0.8);
+}
+
+.closed {
+    display: none;
+    opacity: 0;
+}
