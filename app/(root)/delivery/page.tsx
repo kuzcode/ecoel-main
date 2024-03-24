@@ -27,7 +27,7 @@ function Delivery() {
                         <div className="container">
                             <h2 className='title2 head-text'>Товары</h2>
                             <ul>
-                                {items.map(item => (
+                                {items.sort((a, b) => b.added - a.added).map(item => (
                                     <li key={item.id}>
                                         <Image src={`/${item.id}.png`} alt={item.id} className="img" width={180} height={135} />
                                         <h6>{item.title} <span>· {item.amount}</span></h6>
@@ -63,20 +63,39 @@ function Delivery() {
 
                         <p className='point'>Выберите место доставки:</p>
                         <select>
-                            <option value="someOption">Мужская раздевалка</option>
-                            <option value="otherOption">Пуфики (2 этаж)</option>
+                            <option value="1">Мужская раздевалка</option>
+                            <option value="2">Пуфики (2 этаж)</option>
                         </select>
 
                         <p className='point'>Итого {price.toFixed(2)} BYN, способ оплаты:</p>
                         <select>
-                            <option value="someOption">Бонусами</option>
-                            <option value="otherOption">Наличными</option>
+                            <option value="1">Бонусами</option>
+                            <option value="2">Наличными</option>
                         </select>
 
                         <div className="center"><button className='btn' onClick={() => {
-                            alert('анна тУркова')
-                        }}>Закать</button>
+                            document.getElementById('content2')?.classList.add('leftContent')
+                            document.getElementById('content2')?.classList.remove('rightContent')
+                            document.getElementById('content3')?.classList.add('rightContent')
+                        }}>Заказать</button>
+                        </div>
                     </div>
+
+                    <div className="content2 c4" id='content3'>
+                    <h3>Заказ оформлен ✅</h3>
+                    <p className='point'>Курьер уже несёт вам ваш заказ!<br /><a href="mailto:ecoeldelivery@gmail.com" className='link2'>Связаться с ним</a></p>
+
+                    <div className="center"><button className='btn2' onClick={() => {
+                    if(confirm('Вы уверены, что хотите отменить заказ?') == true){
+                    document.getElementById('content3')?.classList.remove('rightContent')
+                    document.getElementById('content')?.classList.remove('leftContent')}
+
+                }}>Отменить</button>
+                </div>
+                <div className="center"><button className='btn' onClick={() => {
+                    alert('евка шмевка дура ди наху аня не будь как она')
+                }}>Доставлено</button>
+                </div>
                     </div>
                 </div>
             </div>
@@ -103,7 +122,7 @@ function Delivery() {
                 <div className="container">
                     <h2 className='title2 head-text'>Товары</h2>
                     <ul>
-                        {items.map(item => (
+                        {itemsList.map(item => (
                             <li key={item.id}>
                                 <Image src={`/${item.id}.png`} alt={item.id} className="img" width={180} height={135} />
                                 <h6>{item.title} <span>· {item.amount}</span></h6>

@@ -226,7 +226,7 @@ padding:6px 36px;
 border-radius:14px;
 width:100%;
 max-width:400px;
-margin-top:calc(100vh - 300px)}
+}
 .link{
 color:#d24bff;
 margin:2px 0 0 8px}
@@ -279,10 +279,14 @@ background:#ca37ff60}
     color:#fff;
     padding:3px 28px;
     border-radius:15px;
-    margin:0 24px 20px 24px;
+    margin:0;
     transition: .2s;
     font-size: 18px;
-    width: 100%;
+    width: calc(100% - 48px);
+    margin: 20px 24px;
+
+    position: absolute;
+    bottom: 0;
 }
 
 .content h3 {
@@ -297,11 +301,21 @@ background:#ca37ff60}
     font-weight: 600;
     font-size: 32px;
     float: right;
-    margin: 10px 24px;
+    margin: 20px 24px;
     transition: .1s;
     z-index: 999;
     cursor: pointer;
     position: relative;
+
+    backdrop-filter:blur(9px);
+    -webkit-backdrop-filter:blur(9px);
+    background: #3b3b4a53;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    border-radius: 100%;
 }
 .basketDiv .cancel:active {
     color: #e8eaf658;
@@ -322,8 +336,11 @@ background:#ca37ff60}
     padding-left: 0;
     transition: .5s;
     max-width: 100%;
-    position: absolute;
+    position: relative;
+    height: 100%;
 }
+
+
 
 .leftContent {
     top: 0;
@@ -331,7 +348,6 @@ background:#ca37ff60}
 }
 
 .content2{
-    transform: translate(0, -64px);
     margin-left: 100%;
     padding: -100px 24px;
     padding-left: 0;
@@ -341,8 +357,16 @@ background:#ca37ff60}
     overflow-x: hidden;
     overflow-y: auto;
     text-wrap: nowrap;
-    position: relative;
+
+    top: 0;
+    padding-left: 0;
+    transition: .5s;
+    max-width: 100%;
+    position: absolute;
+
+    height: 100%;
 }
+
 
 .content2 .link {
     margin: -12px 0 16px 24px;
@@ -373,4 +397,30 @@ select {
     font-size: 27px;
     padding: 12px 24px;
     z-index: 99999;
+}
+
+.btn2{
+    background: #282832;
+    color:#fff;
+    padding:3px 28px;
+    border-radius:15px;
+    margin:0;
+    transition: .2s;
+    font-size: 18px;
+    width: calc(100% - 48px);
+    margin: 0;
+
+    position: absolute;
+    bottom: 64px;
+}
+
+.link2 {
+    margin: 0;
+    color:#d24bff;
+    text-decoration:underline #d24bff 1px;
+    cursor:pointer}
+
+.c4 {
+    background: #121218;
+    height: 100%;
 }
