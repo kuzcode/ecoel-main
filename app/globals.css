@@ -145,6 +145,9 @@ margin-top:0;}
 color:#d24bff;
 text-decoration:underline #d24bff 1px;
 cursor:pointer}
+.link:focus {
+outline:none;
+}
 .footerDot{
 color:#ffffff;
 font-size:20px;}
@@ -356,7 +359,6 @@ background:#ca37ff60}
     max-width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    text-wrap: nowrap;
 
     top: 0;
     padding-left: 0;
@@ -424,3 +426,20 @@ select {
     background: #121218;
     height: 100%;
 }
+
+button, .link, image, .link2::-moz-focus-inner {
+    border: 0;
+  }
+  button, .link, image, .link2:-moz-focusring {
+    outline: none;
+  }
+  button, .link, image, .link2:focus {
+    outline: none;
+  }
+  button, .link, image, .link2 {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }

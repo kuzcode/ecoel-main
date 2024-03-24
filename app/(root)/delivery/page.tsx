@@ -74,9 +74,11 @@ function Delivery() {
                         </select>
 
                         <div className="center"><button className='btn' onClick={() => {
-                            document.getElementById('content2')?.classList.add('leftContent')
-                            document.getElementById('content2')?.classList.remove('rightContent')
-                            document.getElementById('content3')?.classList.add('rightContent')
+                            if(confirm('Подвердите заказ') == true) {
+                                document.getElementById('content2')?.classList.add('leftContent');
+                                document.getElementById('content2')?.classList.remove('rightContent');
+                                document.getElementById('content3')?.classList.add('rightContent');
+                            }
                         }}>Заказать</button>
                         </div>
                     </div>
@@ -84,6 +86,7 @@ function Delivery() {
                     <div className="content2 c4" id='content3'>
                     <h3>Заказ оформлен ✅</h3>
                     <p className='point'>Курьер уже несёт вам ваш заказ!<br /><a href="mailto:ecoeldelivery@gmail.com" className='link2'>Связаться с ним</a></p>
+
 
                     <div className="center"><button className='btn2' onClick={() => {
                     if(confirm('Вы уверены, что хотите отменить заказ?') == true){
